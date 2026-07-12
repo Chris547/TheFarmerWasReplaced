@@ -1,0 +1,6 @@
+Backup/
+*.log
+Themes/
+options.txt
+output.txt
+steam_autocloud.vdf
