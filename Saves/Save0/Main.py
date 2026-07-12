@@ -1,17 +1,19 @@
+import config
 import world
 import do
 import go
 import garden
-import config
 
+# NOTE: clear() does not reset watering state to 0.
 clear()
+
 while True:
 	# Set goal
-	goal = "create_pumpkins"
-	print(goal)
+	#goal = "create_pumpkins"
+	#print(goal)
 
 	# Check goals
 	while num_items(Items.Pumpkin) < 4000:
 		# Execute steps
 		# plant 100% pumpkins
-		plant(Entities.Pumpkin)
+		do.planting(Entities.Carrot)
