@@ -15,7 +15,7 @@ for x in range(0, get_world_size()):
 		])
 
 # get a value
-def get(x, y, key):
+def get(x:int, y:int, key:string):
 	for (k, v) in state[x][y]:
 		if k == key:
 			log.debug("world.get", (x, y, k, v))
@@ -24,12 +24,12 @@ def get(x, y, key):
 	return None
 
 # set a value (key must already exist)
-def set(x, y, key, value):
+def set(x:int, y:int, key:string, value:Any):
 	for (k, v) in state[x][y]:
 		if k == key:
-			log.debug("world.set", (x, y, k, v, value))
 			state[x][y].remove((k,v))
 			state[x][y].append((k,value))
+			log.debug("world.set", (x, y, k, v, value))
 			return True
 	log.error("world.set", ("KEY DOES NOT EXIST", x, y, key, value))
 	return False

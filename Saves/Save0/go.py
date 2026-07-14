@@ -1,7 +1,7 @@
-def absolute(x, y):
+def absolute(x:int, y:int):
 	relative(x - get_pos_x(), y - get_pos_y())
 
-def relative(x, y):
+def relative(x:int, y:int):
 	if x > 0:
 		for n in range(0, x, 1):
 			move(East)

@@ -13,7 +13,11 @@ while True:
 	#print(goal)
 
 	# Check goals
-	while num_items(Items.Pumpkin) < 4000:
-		# Execute steps
-		# plant 100% pumpkins
-		do.planting(Entities.Carrot)
+
+	# Execute steps
+	# plant 100% pumpkins
+	for x in range(0, get_world_size()):
+		for y in range(0, get_world_size()):
+			garden.put_pumpkin()
+			go.absolute(x, y)
+		
